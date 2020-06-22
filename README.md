@@ -7,7 +7,7 @@
 |password|integer|null: false|
 
 ### Association
-- has_many :users_groups
+- belongs_to :users_groups
 - belongs_to :chats
 
 ## chats table
@@ -16,7 +16,7 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |content|text|null: false|
-|image|string|--|
+|image|string||
 
 ### Association
 - has_many :users
@@ -30,7 +30,7 @@
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :users_groups
+- belongs_to :users_groups
 - belongs_to :chats
 
 ## users_groups table
@@ -40,5 +40,5 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belong_to :users
-- belong_to :groups
+- has_many :users
+- has_many :groups
