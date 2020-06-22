@@ -17,18 +17,18 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|content|text|null: false|
+|content|text|------|
 |image|string|------|
 
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 ## groups table
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :users_groups
@@ -42,5 +42,5 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
