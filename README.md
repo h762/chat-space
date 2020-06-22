@@ -17,7 +17,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |content|text|null: false|
 |image|string||
-|chat_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :users
