@@ -2,37 +2,38 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, unique: true|
-|email|integer|null: false|
-|password|integer|null: false|
+|name|string|null: false, unique: true|
+|email|string|null: false|
+|password|string|null: false|
 
 ### Association
-- belongs_to :users_groups
-- belongs_to :chats
+- has_many :users_groups
+- has_many :chats
+- has_many :groups, through: :users_groups
 
 ## chats table
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
-|content|text|null: false|
-|image|string||
 |group_id|integer|null: false, foreign_key: true|
+|content|text|null: false|
+|image|string|------|
 
 ### Association
-- has_many :users
-- has_many :groups
+- belongs_to :users
+- belongs_to :groups
 
 ## groups table
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|integer|null: false, unique: true|
-|user_id|integer|null: false, foreign_key: true|
+|group_name|string|null: false, unique: true|
 
 ### Association
-- belongs_to :users_groups
-- belongs_to :chats
+- has_many :users_groups
+- has_many :chats
+- has_many :users, through: :users_groups
 
 ## users_groups table
 |Column|Type|Options|
@@ -41,5 +42,5 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :users
-- has_many :groups
+- belongs_to :users
+- belongs_to :groups
