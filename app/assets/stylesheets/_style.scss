@@ -1,0 +1,20 @@
+.Space{
+  display: flex;
+  &__side_bar{
+    width: 300px;
+    height: 100vh;
+    background-color: #253141;
+    &__item{
+      height: 100px;
+    }
+    &__list{
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+    }
+  }
+    &__chat{
+    width: calc(100vw - 300px);
+    height: 100vh;
+    background-color: #ffffff;
+  }
+}
