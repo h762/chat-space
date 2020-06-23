@@ -3,12 +3,14 @@
     .Space__side_bar__item
       .Space__side_bar__item__assist
         .Space__side_bar__item__assist__name
-          user name
+          masa
         .Space__side_bar__item__assist__icon
-          = link_to "#", class: "Space__side_bar__item__assist__icon--write" do
-            = icon('fas', 'edit')
-          = link_to "#", class: "Space__side_bar__item__assist__icon--setting" do
-            = icon('fas', 'cog')
+          = link_to "#", class: "Space__side_bar__item__assist__icon--btn" do
+            = icon('fas', 'edit', class: "Space__side_bar__item__assist__icon--write")
+            %span<>
+          = link_to "#", class: "Space__side_bar__item__assist__icon--btn" do
+            = icon('fas', 'cog', class: "Space__side_bar__item__assist__icon--setting")
+            %span<>
     .Space__side_bar__list
   .Space__chat
     .Space__chat__groupInfo
