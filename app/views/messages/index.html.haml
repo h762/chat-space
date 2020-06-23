@@ -5,6 +5,10 @@
         .Space__side_bar__item__assist__name
           user name
         .Space__side_bar__item__assist__icon
+          = link_to "#", class: "Space__side_bar__item__assist__icon--write" do
+            = icon('fas', 'edit')
+          = link_to "#", class: "Space__side_bar__item__assist__icon--setting" do
+            = icon('fas', 'cog')
     .Space__side_bar__list
   .Space__chat
     .Space__chat__groupInfo
