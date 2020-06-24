@@ -66,21 +66,23 @@
         &__name{
           font-size: 20px;
           color:#333333;
-          padding:35px 0 15px 40px;
+          padding:35px 0 0 40px;
         }
         &__btn{
+          color: #38aef0;
           text-decoration: none;
           font-size: 16px;
-          border: 1px solid red;
-          // width: 72px;
-          // padding:0 20px;
-          // margin:28px 40px 0 0;
+          border: 1px solid #38aef0;
+          line-height: 40px;
+          width: 72px;
+          padding:0 20px;
+          margin:28px 40px 0 0;
         }
       }
       &__member{
         font-size: 12px;
         color: #999999;
-        padding-left:40px;
+        padding:15px 0 0 40px;
       }
     }
     &__display{
