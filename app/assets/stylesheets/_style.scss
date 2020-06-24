@@ -60,6 +60,19 @@
       background-color: #ffffff;
       height: 100px;
       border-bottom:1px solid #eeeeee;
+      &__step{
+        display: flex;
+        justify-content: space-between;
+        &__name{
+          font-size: 20px;
+          color:#333333;
+        }
+        &__btn{}
+      &__member{
+        font-size: 12px;
+        color: #999999;
+      }
+      }
     }
     &__display{
       height:calc(100vh - 190px);
