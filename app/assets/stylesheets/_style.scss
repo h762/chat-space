@@ -88,6 +88,26 @@
     &__display{
       height:calc(100vh - 190px);
       background-color: #fafafa;
+      padding-left: 40px;
+      &__info{
+        display: flex;
+        padding-top: 35px;
+        &__name{
+          font-size: 16px;
+          color: #333333;
+          padding-bottom: 12px;
+        }
+        &__time{
+          font-size: 12px;
+          color: #999999;
+          padding-left: 5px;
+        }
+      }
+      &__text{
+        font-size: 14px;
+        color: #433A54;
+        margin-bottom: 11px; 
+      }
     }
     &__form{
       height: 90px;
