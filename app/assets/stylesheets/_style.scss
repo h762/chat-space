@@ -37,6 +37,18 @@
     &__list{
       height: calc(100vh - 100px);
       background-color: #2f3e51;
+      &__message{
+        &__group_name{
+          font-size: 15px;
+          color:#ffffff;
+          padding:20px 20px 5px 20px;
+        }
+        &__current_message{
+          font-size: 11px;
+          color:#ffffff;
+          padding:0 20px 40px 20px;
+        }
+      }
     }
   }
   &__chat{
