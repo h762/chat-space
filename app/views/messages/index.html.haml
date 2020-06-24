@@ -50,7 +50,9 @@
       .Space__chat__form__textForm
         .Space__chat__form__textForm__inputArea
           type
-        .Space__chat__form__textForm__iconArea
-          icon
+        = label :image, class: "Space__chat__form__textForm__iconArea" do
+          = icon('far', 'image', class: "test")
+          %input{type: "file", class: "Space__chat__form__textForm__iconArea__image"}
       .Space__chat__form__sendBtn
         send
+        -# %span<>
