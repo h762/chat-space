@@ -38,12 +38,12 @@
       height: calc(100vh - 100px);
       background-color: #2f3e51;
       &__message{
-        &__group_name{
+        &__groupName{
           font-size: 15px;
           color:#ffffff;
           padding:20px 20px 5px 20px;
         }
-        &__current_message{
+        &__currentMessage{
           font-size: 11px;
           color:#ffffff;
           padding:0 20px 40px 20px;
