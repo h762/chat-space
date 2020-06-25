@@ -112,48 +112,41 @@
     &__form{
       height: 90px;
       background-color: #d2d2d2;
-      display: flex;
-      align-items: center;
-      &__textForm{
-        width: 100%;
-        margin-left: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        background-color: #ffffff;
-        &__inputArea{
-          line-height: 50px;
-          width: 100%;
-          font-size: 16px;
-          padding-left: 10px;
-        }
-        &__iconArea{
-        
-          &__text{
-            border: none;
-          }
-          &__image{
-            &--icon{
-              display: none;
+      padding: 20px 40px;
+        &__area{
+          display: flex;
+          &__textForm{
+            width: 100%;
+            display: flex;
+            position: relative;
+            &__text{
+              height: 50px;
+              width: 100%;
+              color: #434a54;
+              border-style: none;
+              padding:0 40px 0 10px;
+            }
+            &__image{
+              cursor: pointer;
               position: absolute;
               right: 10px;
               top: 10px;
+              &--icon{
+                display: none;
+              }
             }
           }
+          &__sendBtn{
+            width: 100px;
+            height: 50px;
+            padding: 0 30px;
+            margin-left: 15px;
+            background-color: #38aef0;
+            border: none;
+            color: white;
+            cursor: pointer;
+          }
         }
-      }
-      &__sendBtn{
-        margin:0 40px 0 15px;
-        &__visual{
-          background-color: #38aef0;
-          line-height: 50px;
-          border: none;
-          font-size: 16px;
-          color: #fff;
-          padding: 0 30px;
-        }
-      }
     }
   }
 }
