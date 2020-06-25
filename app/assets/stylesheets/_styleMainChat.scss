@@ -3,7 +3,6 @@
     width: calc(100vw - 300px);
     height: 100vh;
     background-color: #ffffff;
-  
     &__groupInfo{
       background-color: #ffffff;
       height: 100px;
@@ -53,7 +52,7 @@
       }
       &__text{
         font-size: 14px;
-        color: #433A54;
+        color: #434A54;
         margin-bottom: 11px; 
       }
     }
@@ -79,7 +78,7 @@
               position: absolute;
               right: 10px;
               top: 10px;
-              &--icon{
+              &__icon{
                 display: none;
               }
             }
@@ -92,6 +91,7 @@
             background-color: #38aef0;
             border: none;
             color: white;
+            font-size: 16px;
             cursor: pointer;
           }
         }
