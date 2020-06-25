@@ -47,12 +47,12 @@
       .Space__chat__display__text
         message
     .Space__chat__form
-      .Space__chat__form__textForm
-        .Space__chat__form__textForm__inputArea
-          type
-        = label :image, class: "Space__chat__form__textForm__iconArea" do
-          = icon('far', 'image', class: "test")
-          %input{type: "file", class: "Space__chat__form__textForm__iconArea__image"}
+      %form.new_message
+        .Space__chat__form__textForm
+          .Space__chat__form__textForm__inputArea
+            %input{type: "text", class: "Space__chat__form__textForm__iconArea__text", placeholder: "type a message"}
+            %label{class: "Space__chat__form__textForm__iconArea__image"}
+              = icon('far', 'image')
+              %input{type: "file", class: "Space__chat__form__textForm__iconArea__image--icon"}
       .Space__chat__form__sendBtn
-        send
-        -# %span<>
+        %input{type: "submit", value: "send", class: "Space__chat__form__sendBtn__visual"}

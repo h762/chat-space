@@ -129,20 +129,30 @@
           padding-left: 10px;
         }
         &__iconArea{
-          position: absolute;
-          right: 10px;
-          height: 50px;
+        
+          &__text{
+            border: none;
+          }
           &__image{
+            &--icon{
+              display: none;
+              position: absolute;
+              right: 10px;
+              top: 10px;
+            }
           }
         }
       }
       &__sendBtn{
-        background-color: #38aef0;
-        line-height: 50px;
-        font-size: 16px;
-        color: #fff;
-        padding: 0 30px;
         margin:0 40px 0 15px;
+        &__visual{
+          background-color: #38aef0;
+          line-height: 50px;
+          border: none;
+          font-size: 16px;
+          color: #fff;
+          padding: 0 30px;
+        }
       }
     }
   }
