@@ -12,13 +12,5 @@
             = icon('fas', 'cog', class: "Base__sideBar__item__assist__icon--setting")
             %span<>
     .Base__sideBar__list
-      .Base__sideBar__list__message
-        .Base__sideBar__list__message__groupName
-          techcamp
-        .Base__sideBar__list__message__currentMessage
-          まだメッセージがありません
-      .Base__sideBar__list__message
-        .Base__sideBar__list__message__groupName
-          techcamp
-        .Base__sideBar__list__message__currentMessage
-          まだメッセージがありません
+      = render "temporaryGroup"
+      = render "temporaryGroup"
