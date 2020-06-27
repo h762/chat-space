@@ -12,5 +12,10 @@
             = icon('fas', 'cog', class: "Base__sideBar__item__assist__icon--setting")
             %span<>
     .Base__sideBar__list
-      = render "temporaryGroup"
-      = render "temporaryGroup"
+      - current_user.groups.each do |group|
+        .Base__sideBar__list__message
+          = link_to '#' do
+            .Base__sideBar__list__message__groupName
+              = group.name
+            .Base__sideBar__list__message__currentMessage
+              まだメッセージがありません
