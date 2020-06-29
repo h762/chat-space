@@ -4,10 +4,14 @@
       .Base__chat__groupInfo__step
         .Base__chat__groupInfo__step__name
           =@group.name
-        = link_to edit_group_path, class: "Base__chat__groupInfo__step__btn" do
+        = link_to edit_group_path(id: @group.id), class: "Base__chat__groupInfo__step__btn" do
           Edit
       .Base__chat__groupInfo__member
-        = "Member : #{ @group.name }"
+        Member : 
+        - @group.users.each_with_index do |user, i|
+          - unless i.zero?
+            ,
+          = user.name
     .Base__chat__display
       = render @chats
     .Base__chat__form
