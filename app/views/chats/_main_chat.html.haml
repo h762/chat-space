@@ -3,11 +3,11 @@
     .Base__chat__groupInfo
       .Base__chat__groupInfo__step
         .Base__chat__groupInfo__step__name
-          current group name
-        = link_to "#", class: "Base__chat__groupInfo__step__btn" do
+          =@group.name
+        = link_to edit_group_path, class: "Base__chat__groupInfo__step__btn" do
           Edit
       .Base__chat__groupInfo__member
-        = "Member : #{current_user}"
+        = "Member : #{ @group.name }"
     .Base__chat__display
       = render @chats
     .Base__chat__form
