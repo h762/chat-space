@@ -5,7 +5,7 @@ class Group < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   def show_last_chat
-    if (last_chat = chat.last).present?
+    if (last_chat = chats.last).present?
       if last_chat.content?
         last_chat.content
       else

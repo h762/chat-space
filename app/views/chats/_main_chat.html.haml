@@ -3,15 +3,15 @@
     .Base__chat__groupInfo
       .Base__chat__groupInfo__step
         .Base__chat__groupInfo__step__name
-          = current_group.name
-        = link_to edit_group_path(current_group), class: "Base__chat__groupInfo__step__btn" do
+          current group name
+        = link_to "#", class: "Base__chat__groupInfo__step__btn" do
           Edit
       .Base__chat__groupInfo__member
-        Member : , = current_group.users
+        = "Member : #{current_user}"
     .Base__chat__display
       = render @chats
     .Base__chat__form
-      = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
+      = form_with model: [@group, @chat], html: {class: "Form"}, local: true do |f|
         .Base__chat__form__area
           .Base__chat__form__area__textForm
             = f.text_field :content, class: 'Base__chat__form__area__textForm__text', placeholder: 'type a message'
