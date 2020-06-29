@@ -3,14 +3,13 @@
     .Base__chat__groupInfo
       .Base__chat__groupInfo__step
         .Base__chat__groupInfo__step__name
-          test
-        = link_to "#", class: "Base__chat__groupInfo__step__btn" do
+          = current_group.name
+        = link_to edit_group_path(current_group), class: "Base__chat__groupInfo__step__btn" do
           Edit
       .Base__chat__groupInfo__member
-        Member : masa
+        Member : , = current_group.users
     .Base__chat__display
-      = render "chats/temporaryMessage"
-      = render "chats/temporaryMessage"
+      = render @chats
     .Base__chat__form
       = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
         .Base__chat__form__area
