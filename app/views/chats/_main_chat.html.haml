@@ -1,0 +1,25 @@
+.Base
+  .Base__chat
+    .Base__chat__groupInfo
+      .Base__chat__groupInfo__step
+        .Base__chat__groupInfo__step__name
+          =@group.name
+        = link_to edit_group_path(id: @group.id), class: "Base__chat__groupInfo__step__btn" do
+          Edit
+      .Base__chat__groupInfo__member
+        Member : 
+        - @group.users.each_with_index do |user, i|
+          - unless i.zero?
+            ,
+          = user.name
+    .Base__chat__display
+      = render @chats
+    .Base__chat__form
+      = form_with model: [@group, @chat], html: {class: "Form"}, local: true do |f|
+        .Base__chat__form__area
+          .Base__chat__form__area__textForm
+            = f.text_field :content, class: 'Base__chat__form__area__textForm__text', placeholder: 'type a message'
+            = f.label :image, class: 'Base__chat__form__area__textForm__image' do
+              = icon('far', 'image')
+              = f.file_field :image, class: 'Base__chat__form__area__textForm__image__icon'
+          = f.submit 'Send', class: 'Base__chat__form__area__sendBtn'
