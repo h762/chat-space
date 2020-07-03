@@ -36,6 +36,7 @@
       height:calc(100vh - 190px);
       background-color: #fafafa;
       padding-left: 40px;
+      overflow: scroll;
       &__info{
         display: flex;
         padding-top: 35px;
