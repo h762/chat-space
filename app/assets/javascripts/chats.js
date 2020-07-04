@@ -59,4 +59,20 @@ $(function(){
       alert("メッセージ送信に失敗しました");
     });
   });
+
+  let reloadChats = function() {
+    let last_chat_id = $('.Base__chat__display__info:last').data("chat-id");
+    $.ajax({
+      url: "api/chats",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_chat_id}
+    })
+    .done(function(chats) {
+      console.log('success');
+    })
+    .fail(function() {
+      alert('error');
+    });
+  };
 });
