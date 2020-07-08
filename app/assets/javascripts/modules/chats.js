@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(chat){
     if ( chat.image ){
       let html =
-        `<div class="Base__chat__display__info" data-chat-id=&{chat.id}>
+        `<div class="Base__chat__display__info" data-chat-id=${chat.id}>
           <div class="Base__chat__display__info__name">
             ${chat.user_name}
           </div>
@@ -19,7 +19,7 @@ $(function(){
       return html;
     }else {
       let html = 
-        `<div class="Base__chat__display__info" data-chat-id=&{chat.id}>
+      `<div class="Base__chat__display__info" data-chat-id=${chat.id}>
         <div class="Base__chat__display__info__name">
           ${chat.user_name}
         </div>
@@ -57,6 +57,7 @@ $(function(){
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+      $('.Base__chat__form__area__sendBtn').prop('disabled', false);
     });
   });
 });
